@@ -10,18 +10,30 @@ for (int i = 0; i < array.GetLength(firstMeasurementInArray); i++)
 {
 	for (int j = 0; j < array.GetLength(secondMeasurementInArray); j++)
 	{
-		if (secondLine == i)
-		{ 
-			sumInArray += array[i, j];
-		}
-
 		if (firstColumn == j)
 		{
 			multiplicationInArray *= array[i, j];
 		}
+
 		Console.Write(array[i,j] + " ");
 	}
+
 	Console.WriteLine();
+}
+
+for (int i = 0; i < array.GetLength(firstMeasurementInArray); i++)
+{
+    for (int j = 0; j < array.GetLength(secondMeasurementInArray); j++)
+    {
+        if (secondLine == i)
+        {
+            sumInArray += array[i, j];
+        }
+
+        Console.Write(array[i, j] + " ");
+    }
+
+    Console.WriteLine();
 }
 
 Console.WriteLine($"Сумма второй строки равна {sumInArray}, а произведение первого столбца равно {multiplicationInArray}.");
